@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ISOMETRIC</title>
+	<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500&family=Playfair+Display&display=swap" rel="stylesheet">
+	<style>
+		* {
+			margin: 0 auto;
+			padding: 0 auto;
+		}
+
+		body {
+			font-family: 'Oxanium', cursive;
+			color: black;
+			height: 1080px;
+		}
+		a{
+						color: black;
+			text-decoration: none;
+			
+		}
+		a:hover{
+			animation: blinkk 2s infinite;
+		}
+		@keyframes blinkk{
+			0%{
+				color: black;
+			}
+			50%{
+				color: white;
+			}
+			100%{
+								color: black;
+			}
+		}
+		h1{
+			top:30px;
+			position: relative;
+			padding: 15px;
+display: block;
+			text-align:center;
+			font-size: 60px;
+									z-index: 2;
+
+		}
+		h2{
+			top:20px;
+						position:relative;
+			padding: 10px;
+			display: block;
+			text-align: center;
+			font-size: 25px;
+						z-index: 2;
+
+		}
+		footer{
+						text-align: center;
+
+		}
+		.sk4{
+			position:relative;
+			display: block;
+			z-index: 1;
+		}
+
+		.st0 {
+			fill: #5F5E5D;
+		}
+
+		.st1 {
+			fill: #D1D1D2;
+		}
+
+		.st2 {
+			fill: #EEEFEF;
+		}
+
+		.st3 {
+			fill: #727272;
+		}
+
+		.st4 {
+			fill: #1A1A1A;
+		}
+
+		.st5 {
+			fill: #232323;
+		}
+
+		.st6 {
+			fill: #333333;
+		}
+
+		.st7 {
+			fill: #4C4240;
+		}
+
+		.st8 {
+			fill: #2A211C;
+		}
+
+		.st9 {
+			fill: #B3B3B3;
+		}
+
+		.st10 {
+			fill: #D0C8BB;
+		}
+
+		.st11 {
+			fill: #FCF8F0;
+		}
+
+		.st12 {
+			fill: #C1272D;
+		}
+
+		.st13 {
+			fill: #BBBCB9;
+		}
+
+		.st14 {
+			fill: #4D4D4D;
+		}
+
+		.st15 {
+			fill: #9E9E9E;
+		}
+
+		.st16 {
+			fill: #666666;
+		}
+
+		.st17 {
+			fill: #CCCCCC;
+		}
+
+		.st18 {
+			fill: none;
+			stroke: #000000;
+			stroke-miterlimit: 10;
+		}
+
+		.st19 {
+			fill: #808080;
+		}
+
+		.st20 {
+			fill: #FFFDFA;
+		}
+
+		.st21 {
+			opacity: 0.71;
+			fill: #C1272D;
+		}
+
+		@keyframes leftto {
+			0% {
+				transform: translateX(-100px);
+			}
+
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes leftto2 {
+			0% {
+				transform: translateX(-50px);
+			}
+
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes rightto {
+			0% {
+				transform: translateX(100px);
+			}
+
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes rightto2 {
+			0% {
+				transform: translateX(50px);
+			}
+
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes topto {
+			0% {
+				transform: translateY(-25px);
+			}
+
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes topto2 {
+			0% {
+				transform: translateY(-50px);
+			}
+
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes topto3 {
+			0% {
+				transform: translateY(-75px);
+			}
+
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes topto4 {
+			0% {
+				transform: translateY(-100px);
+			}
+
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes topto5 {
+			0% {
+				transform: translateY(-125px);
+			}
+
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes topto6 {
+			0% {
+				transform: translateY(-150px);
+			}
+
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes bottomto {
+			0% {
+				transform: translateY(100px);
+			}
+
+			100% {
+				transform: translateX(0px);
+			}
+		}
+
+		@keyframes topleftto {
+			0% {
+				transform: translate(-100px, -150px);
+			}
+
+			100% {
+				transform: translate(0px, 0px);
+			}
+		}
+
+		@keyframes toprightto {
+			0% {
+				transform: translate(100px, -150px);
+			}
+
+			100% {
+				transform: translate(0px, 0px);
+			}
+		}
+		@keyframes frontto {
+			0% {
+				transform: translate(-50px, 5px);
+			}
+
+			100% {
+				transform: translate(0px, 0px);
+			}
+		}
+	
+		.wood_left {
+			animation: leftto 2s ease-in;
+		}
+
+		.wood_left_top {
+			animation: topleftto 2s ease-in;
+		}
+
+		.wood_right {
+			animation: rightto 2s ease-in;
+		}
+
+		.wood_right_top {
+			animation: toprightto 2s ease-in;
+
+		}
+
+
+		.cover,.holding {
+			animation: topto6 2s ease-in;
+
+		}
+
+		.main_top {
+			animation: topto 1s ease-in;
+		}
+
+		.turn_bottom,
+		.turn_arm_hall,
+		.turn_rpm_hall, .display_shadow {
+			animation: topto2 1.2s ease-in;
+		}
+
+		.turn_main1,
+		.turn_arm_bottom, .turn_arm_holder, .turn_rpm, .volume_black, .button_black, .volume_white {
+			animation: topto3 1.5s ease-in;
+		}
+
+		.turn_main2,
+		.turn_arm_top,.turn_arm_main , .display{
+			animation: topto4 1.8s ease-in;
+		}
+
+		.turn_main3 {
+			animation: topto5 2s ease-in;
+
+		}
+
+		.main_right {
+			animation: rightto2 1s ease-in ;
+		}
+		.main_front{
+						animation: frontto 1s ease-in;
+		}
+		
+		
+	</style>
+</head>
+
+<body>
+<a href="javascript:window.location.reload(true);">
+<h1 class="headline">
+	Braun x Dieter Rams
+</h1>
+<h2 class="productname">
+	Braun SK4 Turntable
+</h2>
+</a>
+<div class="sk4">
+	<?xml version="1.0" encoding="utf-8"?>
+	<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+	<svg version="1.1" id="레이어_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 70 1366 600"  xml:space="preserve">
+		<!--	wood_left-->
+		<g class="wood_left">
+			<polygon class="st0" points="512.5,472.4 618.8,436.1 618.8,333.6 512.5,369.9 	" />
+			<polygon class="st1" points="512.5,472.4 501,468.6 501,366 512.5,369.9 	" />
+			<polygon class="st2" points="501,366 512.5,369.9 618.8,333.6 607.3,329.6 	" />
+		</g>
+
+		<!--	main_top-->
+		<g class="main_top">
+			<polygon class="st2" points="520.4,376 612.5,344.5 831.2,419.3 739.1,450.9 " />
+		</g>
+
+		<!--	turn_bottom	-->
+		<g class="turn_bottom">
+			<polygon class="st0" points="538.7,375.6 612,351.1 721.2,388.4 647.9,412.9 " />
+			<polygon class="st2" points="543.1,375.9 612.8,352.5 716.9,388.1 647,411.5 " />
+		</g>
+
+		<!--	main_right-->
+		<g class="main_right">
+			<polygon class="st3" points="739.1,450.9 831.2,419.3 831.2,506.3 739.1,537.8 " />
+		</g>
+
+		<!--	main_front-->
+		<g class="main_front">
+			<polygon class="st1" points="520.4,462.5 739.1,537.4 739.1,450.9 520.4,376 	" />
+			<g>
+				<g>
+					<polygon class="st4" points="531.1,394.5 577.2,410.2 577.2,415.5 531.1,399.8 			" />
+					<polygon class="st0" points="531.1,399.8 534.6,398.6 534.6,395.6 531.1,394.5 			" />
+					<polygon class="st2" points="577.2,415.5 531.1,399.8 534.6,398.6 577.2,412.9 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="531.1,404.4 577.2,420.1 577.2,425.5 531.1,409.7 			" />
+					<g>
+						<polygon class="st0" points="531.1,409.7 534.6,408.6 534.6,405.6 531.1,404.4 				" />
+						<polygon class="st2" points="577.2,425.5 531.1,409.7 534.6,408.6 577.2,422.8 				" />
+					</g>
+				</g>
+				<g>
+					<polygon class="st4" points="531.1,414.3 577.2,430.1 577.2,435.4 531.1,419.7 			" />
+					<polygon class="st0" points="531.1,419.7 534.6,418.5 534.6,415.5 531.1,414.3 			" />
+					<polygon class="st2" points="577.2,435.4 531.1,419.7 534.6,418.5 577.2,432.8 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="531.1,424.3 577.2,440 577.2,445.4 531.1,429.6 			" />
+					<polygon class="st0" points="531.1,429.6 534.6,428.5 534.6,425.5 531.1,424.3 			" />
+					<polygon class="st2" points="577.2,445.4 531.1,429.6 534.6,428.5 577.2,442.7 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="531.1,434.2 577.2,450 577.2,455.3 531.1,439.6 			" />
+					<polygon class="st0" points="531.1,439.6 534.6,438.4 534.6,435.4 531.1,434.2 			" />
+					<polygon class="st2" points="577.2,455.3 531.1,439.6 534.6,438.4 577.2,452.7 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="531.1,444.2 577.2,459.9 577.2,465.3 531.1,449.5 			" />
+					<polygon class="st0" points="531.1,449.5 534.6,448.4 534.6,445.4 531.1,444.2 			" />
+					<polygon class="st2" points="577.2,465.3 531.1,449.5 534.6,448.4 577.2,462.6 			" />
+				</g>
+			</g>
+			<g>
+				<g>
+					<polygon class="st4" points="584.3,412.7 630.3,428.4 630.3,433.7 584.3,418 			" />
+					<polygon class="st0" points="584.3,418 587.7,416.8 587.7,413.8 584.3,412.7 			" />
+					<polygon class="st2" points="630.3,433.7 584.3,418 587.7,416.8 630.3,431.1 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="584.3,422.6 630.3,438.4 630.3,443.7 584.3,427.9 			" />
+					<polygon class="st0" points="584.3,427.9 587.7,426.8 587.7,423.8 584.3,422.6 			" />
+					<polygon class="st2" points="630.3,443.7 584.3,427.9 587.7,426.8 630.3,441.1 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="584.3,432.6 630.3,448.3 630.3,453.6 584.3,437.9 			" />
+					<polygon class="st0" points="584.3,437.9 587.7,436.7 587.7,433.7 584.3,432.6 			" />
+					<polygon class="st2" points="630.3,453.6 584.3,437.9 587.7,436.7 630.3,451 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="584.3,442.5 630.3,458.3 630.3,463.6 584.3,447.8 			" />
+					<polygon class="st0" points="584.3,447.8 587.7,446.7 587.7,443.7 584.3,442.5 			" />
+					<polygon class="st2" points="630.3,463.6 584.3,447.8 587.7,446.7 630.3,460.9 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="584.3,452.5 630.3,468.2 630.3,473.5 584.3,457.8 			" />
+					<polygon class="st0" points="584.3,457.8 587.7,456.6 587.7,453.6 584.3,452.5 			" />
+					<polygon class="st2" points="630.3,473.5 584.3,457.8 587.7,456.6 630.3,470.9 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="584.3,462.4 630.3,478.1 630.3,483.5 584.3,467.7 			" />
+					<polygon class="st0" points="584.3,467.7 587.7,466.6 587.7,463.6 584.3,462.4 			" />
+					<polygon class="st2" points="630.3,483.5 584.3,467.7 587.7,466.6 630.3,480.8 			" />
+				</g>
+			</g>
+			<g>
+				<g>
+					<polygon class="st4" points="679.5,445.1 725.5,460.8 725.5,466.2 679.5,450.4 			" />
+					<polygon class="st0" points="679.5,450.4 682.9,449.2 682.9,446.3 679.5,445.1 			" />
+					<polygon class="st2" points="725.5,466.2 679.5,450.4 682.9,449.3 725.5,463.5 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="679.5,455 725.5,470.8 725.5,476.1 679.5,460.4 			" />
+					<polygon class="st0" points="679.5,460.4 682.9,459.2 682.9,456.2 679.5,455 			" />
+					<polygon class="st2" points="725.5,476.1 679.5,460.4 682.9,459.2 725.5,473.5 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="679.5,465 725.5,480.7 725.5,486.1 679.5,470.3 			" />
+					<polygon class="st0" points="679.5,470.3 682.9,469.1 682.9,466.2 679.5,465 			" />
+					<polygon class="st2" points="725.5,486.1 679.5,470.3 682.9,469.1 725.5,483.4 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="679.5,474.9 725.5,490.7 725.5,496 679.5,480.3 			" />
+					<polygon class="st0" points="679.5,480.2 682.9,479.1 682.9,476.1 679.5,474.9 			" />
+					<polygon class="st2" points="725.5,496 679.5,480.3 682.9,479.1 725.5,493.4 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="679.5,484.9 725.5,500.6 725.5,505.9 679.5,490.2 			" />
+					<polygon class="st0" points="679.5,490.2 682.9,489 682.9,486 679.5,484.9 			" />
+					<polygon class="st2" points="725.5,505.9 679.5,490.2 682.9,489 725.5,503.3 			" />
+				</g>
+				<g>
+					<polygon class="st4" points="679.5,494.8 725.5,510.6 725.5,515.9 679.5,500.1 			" />
+					<polygon class="st0" points="679.5,500.1 682.9,499 682.9,496 679.5,494.8 			" />
+					<polygon class="st2" points="725.5,515.9 679.5,500.1 682.9,499 725.5,513.3 			" />
+				</g>
+			</g>
+		</g>
+
+		<!--	volume_black-->
+		<g class="volume_black">
+			<g>
+				<path class="st5" d="M709.2,403.6H700l-0.9,7.9c0,1.3,2.5,2.3,5.5,2.3s5.5-1,5.5-2.3L709.2,403.6z" />
+				<ellipse class="st6" cx="704.6" cy="403.3" rx="4.6" ry="1.9" />
+			</g>
+			<g>
+				<g>
+					<path class="st5" d="M720.7,399.9h-9.2l-0.9,7.9c0,1.3,2.5,2.3,5.5,2.3s5.5-1,5.5-2.3L720.7,399.9z" />
+				</g>
+				<ellipse class="st6" cx="716.1" cy="399.6" rx="4.6" ry="1.9" />
+			</g>
+			<g>
+				<path class="st5" d="M732.3,395.9H723l-0.9,7.9c0,1.3,2.5,2.3,5.5,2.3c3,0,5.5-1,5.5-2.3L732.3,395.9z" />
+				<ellipse class="st6" cx="727.6" cy="395.6" rx="4.6" ry="1.9" />
+			</g>
+		</g>
+
+		<!--  button_black-->
+		<g class="button_black">
+			<g>
+				<polygon points="670.8,419.1 679.9,422.2 685.6,420.3 676.5,417.2 	" />
+				<polygon class="st5" points="670.8,413 679.6,416 685.3,414 676.5,411 	" />
+				<polygon class="st6" points="670.8,413 670.8,419.1 679.6,422.1 679.6,416 	" />
+				<polygon points="679.6,416 685.3,414 685.3,420.2 679.6,422.1 	" />
+			</g>
+			<g>
+				<polygon points="679.9,422.2 688.9,425.3 694.6,423.4 685.6,420.3 	" />
+				<polygon class="st5" points="679.9,416.1 688.8,419.1 694.5,417.2 685.6,414.1 	" />
+				<polygon class="st6" points="679.9,416.1 679.9,422.2 688.8,425.3 688.8,419.1 	" />
+				<polygon points="688.8,419.1 694.5,417.2 694.5,423.3 688.8,425.3 	" />
+			</g>
+
+			<g>
+				<polygon points="688.9,425.3 697.9,428.4 703.6,426.5 694.6,423.4 	" />
+				<polygon class="st6" points="689.1,419.2 689.1,425.4 697.8,428.4 697.8,422.2 	" />
+				<polygon points="703.5,420.2 697.8,422.2 697.8,428.4 703.5,426.4 	" />
+				<polygon class="st5" points="689.1,419.2 697.8,422.2 703.5,420.2 694.8,417.3 	" />
+			</g>
+			<g>
+				<polygon points="697.9,428.4 706.9,431.5 712.6,429.5 703.6,426.5 	" />
+				<polygon class="st6" points="698.1,426.3 698.1,428.4 706.9,431.5 706.9,429.3 	" />
+				<polygon points="706.9,429.3 706.9,431.5 712.6,429.5 712.6,427.4 	" />
+				<polygon class="st5" points="698.1,426.3 706.9,429.3 712.6,427.4 703.8,424.4 	" />
+			</g>
+			<g>
+				<polygon points="715.9,434.6 706.9,431.5 712.6,429.5 721.6,432.6 	" />
+				<polygon points="721.6,426.5 721.6,432.6 715.9,434.6 715.9,428.4 	" />
+				<polygon class="st6" points="707.1,425.4 707.1,431.6 715.9,434.6 715.9,428.4 	" />
+				<polygon class="st5" points="715.9,428.4 707.1,425.4 712.8,423.5 721.6,426.5 	" />
+			</g>
+		</g>
+		<!--		turn_rpm_hall-->
+		<g class="turn_rpm_hall">
+			<path class="st4" d="M566.7,375.4c0,0-1.8,2.8,0.9,5.4l0.8-0.2c-2.7-2.6-0.9-5.4-0.9-5.4L566.7,375.4z" />
+		</g>
+
+		<!--		turn_arm_hall-->
+		<g class="turn_arm_hall">
+			<path class="st9" d="M701.6,387.8c0-1.9-3.8-3.5-8.5-3.5c-4.7,0-8.5,1.6-8.5,3.5v1.1h0.4c1.1,1.4,4.3,2.4,8.1,2.4
+		c3.8,0,7-1,8.1-2.4h0.4V387.8z" />
+			<ellipse cx="693.1" cy="388.9" rx="8.5" ry="3.5" />
+		</g>
+
+		<!--volume_white-->
+		<g class="volume_white">
+			<path class="st10" d="M745.1,437.1l-0.9-5.8H730l-0.9,5.8c0,0.1-0.1,0.2-0.1,0.4c0,1.8,3.6,3.3,8,3.3s8-1.5,8-3.3
+		C745.1,437.4,745.1,437.2,745.1,437.1z" />
+			<ellipse class="st11" cx="737.1" cy="431.3" rx="7.1" ry="2.9" />
+			<ellipse class="st12" cx="737.1" cy="431.3" rx="1.4" ry="0.6" />
+		</g>
+
+		<!--		turn_main1-->
+		<g class="turn_main1">
+			<g>
+				<path class="st13" d="M647.2,371.2c-4.9-5.3-18.6-9-34.7-9s-29.8,3.8-34.7,9h-2v4.3c0,7.4,16.4,13.4,36.7,13.4s36.7-6,36.7-13.4
+			v-4.3H647.2z" />
+				<ellipse class="st4" cx="612.5" cy="372.1" rx="36.7" ry="13.4" />
+			</g>
+		</g>
+
+		<!--turn_arm_bottom-->
+		<g class="turn_arm_bottom">
+			<path class="st14" d="M688.4,376v11.8c0,1,2.1,1.9,4.6,1.9s4.6-0.9,4.6-1.9V376H688.4z" />
+			<ellipse class="st9" cx="693.1" cy="376" rx="4.6" ry="1.9" />
+		</g>
+
+		<!--turn_arm_holder-->
+		<g class="turn_arm_holder">
+			<path class="st14" d="M655.4,393.5v5.7c0,0.7,1.4,1.3,3.1,1.3c1.7,0,3.1-0.6,3.1-1.3v-5.7H655.4z" />
+			<ellipse class="st15" cx="658.6" cy="393.5" rx="3.1" ry="1.3" />
+		</g>
+
+		<!--		turn_rpm-->
+		<g class="turn_rpm">
+			<path class="st14" d="M564.8,371v4.9c0,0.6,0.9,1.1,2,1.1c1.1,0,2-0.5,2-1.1V371H564.8z" />
+			<ellipse class="st15" cx="566.7" cy="371" rx="2" ry="0.8" />
+		</g>
+
+		<!--		turn_arm_main-->
+		<g class="turn_arm_main">
+			<g>
+				<path class="st16" d="M689.1,384.5l-0.7-0.7c-16.7,5.6-33.2,7.1-33.2,7.1l1.7,3.1c0,0,17.5-1.9,34.2-7.4v-2.5L689.1,384.5z" />
+				<path class="st17" d="M691.2,384.1c-16.7,5.6-34.2,7.4-34.2,7.4l-1.7-3.1c0,0,16.5-1.5,33.2-7.1C688.4,383,689.6,383.7,691.2,384.1
+		z" />
+			</g>
+			<g>
+				<g>
+					<polygon class="st16" points="634.2,386.7 636.2,391.7 658,389.8 655.1,384.9 		" />
+					<polygon class="st6" points="634.2,386.7 634.2,392.7 636.2,397.8 636.2,391.7 		" />
+				</g>
+				<g>
+					<polygon points="636.2,391.7 636.2,397.8 658,395.8 658,389.8 		" />
+				</g>
+			</g>
+		</g>
+
+		<!--		wood_right-->
+		<g class="wood_right">
+			<polygon class="st0" points="743.8,550.7 850,514.3 850,411.8 743.8,448.1 	" />
+			<polygon class="st1" points="743.8,550.7 732.3,546.8 732.3,444.2 743.8,448.1 	" />
+			<polygon class="st2" points="732.3,444.2 743.8,448.1 850,411.8 838.5,407.9 	" />
+		</g>
+
+		<!--		wood_left_top-->
+		<g class="wood_left_top">
+			<path class="st18" d="M850,412.8" />
+			<g>
+				<polygon class="st1" points="577,229.8 588.6,233.7 618.8,333.5 607.3,329.5 	" />
+				<polygon class="st0" points="618.8,333.5 634.2,320.3 603.9,220.6 588.6,233.7 	" />
+				<polygon class="st2" points="603.9,220.6 592.4,216.7 577,229.8 588.6,233.7 	" />
+			</g>
+		</g>
+
+		<!--		turn_arm_top-->
+		<g class="turn_arm_top">
+			<path class="st18" d="M627.2,327.3" />
+			<g>
+				<path class="st14" d="M690.8,373v3c0,0.5,1,1,2.3,1c1.3,0,2.3-0.4,2.3-1v-3H690.8z" />
+				<ellipse class="st9" cx="693.1" cy="373" rx="2.3" ry="1" />
+			</g>
+		</g>
+
+		<!--		holding-->
+		<g class="holding">
+			<polygon points="590.4,348.8 586.9,347.6 608.1,286.9 611.6,288.2 " />
+		</g>
+
+		<!--		turn_main2-->
+		<g class="turn_main2">
+			<path class="st19" d="M622,370.4c-0.6-1.9-4.6-3.4-9.5-3.4s-8.9,1.5-9.5,3.4h-0.1v0.5c0,2.2,4.3,3.9,9.6,3.9s9.6-1.8,9.6-3.9
+		L622,370.4L622,370.4z" />
+			<ellipse class="st9" cx="612.5" cy="370.4" rx="9.6" ry="3.9" />
+		</g>
+
+		<!--		display_shadow-->
+		<g class="display_shadow">
+			<polygon points="757.4,433.4 803.4,417.7 785.2,411.5 739.1,427.2 	" />
+			<polygon class="st7" points="785.2,411.5 785.2,414.3 799.2,419.1 803.4,417.7 	" />
+			<polygon class="st8" points="739.1,427.2 743.3,428.6 785.2,414.3 785.2,411.5 	" />
+		</g>
+
+		<!--cover-->
+		<g class="cover">
+			<polygon class="st2" points="602.3,228 629.6,317.8 849.3,392.2 822,302.4 	" />
+			<path class="st1" d="M621.5,324.4l5.7,1.9c27.8,1.2,47.6,9.8,64,21.7l145,49.1l11-9.3l-214.7-72.7L621.5,324.4z" />
+			<polygon class="st2" points="824.4,300.6 604.7,226.2 602.5,228.6 629.6,317.8 849.3,392.2 851.7,390.4 	" />
+			<polygon class="st0" points="621.5,324.4 622.6,329.2 628.3,331.2 627.2,326.3 	" />
+			<polygon class="st0" points="691.2,348 692.3,352.8 836.2,401.5 836.2,397.1 	" />
+			<path class="st0" d="M627.2,326.3l1.1,4.8c25.6,0.9,46.4,8.9,64,21.7l-1.1-4.8C674,335.2,653.1,327.4,627.2,326.3z" />
+			<polygon class="st2" points="590.8,238.1 810.5,312.5 824.4,300.6 604.7,226.2 	" />
+			<polygon class="st0" points="592.4,243.2 812.1,317.6 810.6,312.5 590.8,238.1 	" />
+		</g>
+
+		<!--		wood_right_top-->
+		<g class="wood_right_top">
+			<polygon class="st1" points="808.3,308.1 819.8,312.1 850,411.8 838.5,407.9 	" />
+			<polygon class="st0" points="850,411.8 865.4,398.7 835.1,298.9 819.8,312.1 	" />
+			<polygon class="st2" points="835.1,298.9 823.6,295 808.2,308.1 819.8,312.1 	" />
+		</g>
+
+		<!--		turn_main3-->
+		<g class="turn_main3">
+			<path class="st0" d="M611.4,367.5v3.2c0,0.2,0.5,0.4,1.1,0.4c0.6,0,1.1-0.2,1.1-0.4v-3.2H611.4z" />
+			<ellipse class="st2" cx="612.5" cy="367.5" rx="1.1" ry="0.4" />
+		</g>
+
+		<!--		display-->
+		<g class="display">
+			<polygon class="st20" points="757.4,433.5 799.2,419.1 785.2,414.3 743.3,428.6 	" />
+			<polygon class="st21" points="757.2,433.4 765.1,430.8 751.1,426 743.2,428.6 	" />
+		</g>
+
+	</svg>
+</div>
+<footer>
+	<p>Copyright © Sejin OH. All rights reserved. </p>
+</footer>
+</body></html>
